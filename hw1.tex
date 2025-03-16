@@ -1,7 +1,12 @@
-\documentclass[12pt, a4paper]{ctexart}
-\usepackage{amsmath,amssymb} % 添加 amssymb 以支持更多符号
-\usepackage{bussproofs}
-\title{离散数学作业\_0}
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{amssymb} % 添加 amssymb 以支持更多符号
+\usepackage{amsfonts}
+% \usepackage{bussproofs}
+\title{离散数学作业\_1}
 \author{李云浩 241880324}
 \date{\today}
 \begin{document}
@@ -13,21 +18,29 @@
 
 (a) $\textit{p} \land \textit{q}$ \quad (b) $\textit{q} \lor \textit{r}$ \quad (c) $\lnot \textit{p} \land \lnot \textit{r}$ \quad (d) $\lnot \textit{q} \land \textit{r}$ 
 
+\vspace{10pt}
+
 \textbf{T15}
 
 (a) 对于任意的整数，都存在一个整数，使它们之和为偶数。
 
 (b) 存在一个整数，使得它与任意的整数之和都为偶数。
 
+\vspace{10pt}
+
 \textbf{T16}
 
 (a) 所有的整数都不是素数 \quad (b) 存在一个不是偶数的整数。
+
+\vspace{10pt}
 
 \textbf{T18}
 
 (a) $\forall x \lnot P(x)$ \quad (b) $\forall x \forall y R(x, y)$
 
 (c) $\lnot(\exists x (P(x) \land Q(x)))$ \quad (d) $\forall x (P(x) \lor Q(x))$
+
+\vspace{10pt}
 
 \textbf{T28}
 
@@ -43,6 +56,8 @@
     \hline
 \end{array}
 \]
+
+\vspace{10pt}
 
 \textbf{T30}
 
@@ -63,6 +78,8 @@
 \end{array}
 \]
 
+\vspace{10pt}
+
 \textbf{T32}
 
 \[
@@ -81,6 +98,8 @@
     \hline
 \end{array}
 \]
+
+\vspace{10pt}
 
 \textbf{T35}
 
@@ -103,6 +122,8 @@
 
 (a)$\lnot r \rightarrow q$ \quad (b) $\lnot q \land p$ \quad (c) $q \rightarrow \lnot p$ \quad (d) $\lnot p \rightarrow \lnot r$
 
+\vspace{10pt}
+
 \textbf{T7}
 
 (a) 仅当我心情不好时，我会去看电影并且不学习离散数学结构。
@@ -112,6 +133,8 @@
 (c) 如果我心情不好，那么我不会去看电影或者我会学习离散数学结构。
 
 (d) 当且仅当我心情很好，我会去看电影并且不学习离散数学结构。
+
+\vspace{10pt}
 
 \textbf{T12}
 
@@ -157,6 +180,8 @@
 \end{array}
 \]
 
+\vspace{10pt}
+
 \textbf{T13}
 
 $p \rightarrow q$ 的真值表为：\[
@@ -185,6 +210,8 @@ $p \rightarrow q$ 的真值表为：\[
 
 $(\lnot (p \land q)) \rightarrow q$真值为假。
 
+\vspace{10pt}
+
 \textbf{T14}
 
 $p \rightarrow q$ 的真值表为：\[
@@ -212,6 +239,8 @@ $p \rightarrow q$ 的真值表为：\[
 \]
 
 $(\lnot p) \lor (p \rightarrow q)$ 真值为假。
+
+\vspace{10pt}
 
 \textbf{T15}
 
@@ -243,6 +272,8 @@ $p \rightarrow q$ 的真值表为：\[
 
 $(p \land q) \rightarrow \lnot q$ 的真值可能为真可能为假，无法确定。
 
+\vspace{10pt}
+
 \textbf{T16}
 
 $p \rightarrow q$ 的真值表为：\[
@@ -273,6 +304,8 @@ $p \rightarrow q$ 的真值表为：\[
 
 $\lnot (p \rightarrow q) \land \lnot p$的真值为假。
 
+\vspace{10pt}
+
 \textbf{T24}
 
 (a) 天气好或者我去上班。
@@ -280,6 +313,8 @@ $\lnot (p \rightarrow q) \land \lnot p$的真值为假。
 (b) 卡罗尔没有生病，去了野餐但卡罗尔玩得不愉快。
 
 (c) 我进入了比赛并且赢得了这场比赛。
+
+\vspace{10pt}
 
 \textbf{T27}
 
@@ -322,6 +357,8 @@ $(p \land q) \lor (p \land r)$ 的真值表为：
 因此在$\textit{p q r}$ 的不同的真值指派情况下，两个命题的真值情况一致，故两个命题等价。
 即$p \land (q \lor r) \equiv (p \land q) \lor (p \land r)$
 
+\vspace{10pt}
+
 \textbf{T28}
 
 $\lnot (p \lor q)$ 的真值表为：
@@ -355,6 +392,8 @@ $(\lnot p) \land (\lnot q)$ 的真值表为：
 因此在$\textit{p q}$ 的不同的真值指派情况下，两个命题的真值情况一致，故两个命题等价。
 即$\lnot (p \lor q) \equiv (\lnot p) \land (\lnot q)$
 
+\vspace{10pt}
+
 \textbf{T29}
 \begin{align*}
     \lnot (p \leftrightarrow q) &\equiv \lnot ((p \land q) \lor (\lnot p \land \lnot q))\\
@@ -365,6 +404,8 @@ $(\lnot p) \land (\lnot q)$ 的真值表为：
     &\equiv (F \lor (p \land \lnot q)) \lor ((\lnot p \land q) \lor F)\\
     &\equiv ((p \land \lnot q) \lor (q \land \lnot p))\\
 \end{align*}
+
+\vspace{10pt}
 
 \textbf{T30}
 \[
@@ -378,6 +419,8 @@ $(\lnot p) \land (\lnot q)$ 的真值表为：
 
 因此 $\exists x (P(x) \lor Q(x)) \equiv \exists x P(x) \lor \exists x Q(x)$
 
+\vspace{10pt}
+
 \textbf{T31}
 \begin{align*}
 \forall x (P(x) \land Q(x)) &\equiv \lnot (\exists x (P(x) \lor Q(x)))\\
@@ -386,6 +429,8 @@ $(\lnot p) \land (\lnot q)$ 的真值表为：
 \end{align*}
 
 因此 $\forall x(P(x) \land Q(x)) \equiv \forall x P(x) \land \forall x  Q(x)$
+
+\vspace{10pt}
 
 \textbf{T32}
 \begin{align*}
@@ -396,12 +441,16 @@ $(\lnot p) \land (\lnot q)$ 的真值表为：
     &\equiv T\\
 \end{align*}
 
+\vspace{10pt}
+
 \textbf{T33}
 \begin{align*}
     q \rightarrow (p \lor q) &\equiv \lnot q \lor (p \lor q)\\
     &\equiv \lnot q \lor p \lor q\\
     &\equiv T\\
 \end{align*}
+
+\vspace{10pt}
 
 \textbf{T34}
 \begin{align*}
@@ -411,6 +460,8 @@ $(\lnot p) \land (\lnot q)$ 的真值表为：
     &\equiv \lnot p \lor \lnot q \lor q\\
     &\equiv T\\
 \end{align*}
+
+\vspace{10pt}
 
 \textbf{T35}
 \begin{align*}
@@ -437,6 +488,7 @@ $(\lnot p) \land (\lnot q)$ 的真值表为：
 \end{array}
 \]
 
+\vspace{10pt}
 
 \textbf{T12}
 
@@ -466,6 +518,8 @@ $(\lnot p) \land (\lnot q)$ 的真值表为：
 \end{array}
 \]
 
+\vspace{10pt}
+
 \textbf{T18} 证明：$n^2$ 是偶数当且仅当 n 是偶数。
 
 设 p 表示 n 为偶数，q表示 $n^2$ 为偶数。
@@ -480,6 +534,8 @@ $4k^2 + 4k$为偶数，故$n^2$为奇数，与假设矛盾，故假设不成立�
 
 综上所述，$n^2$ 是偶数当且仅当$n$是偶数。
 
+\vspace{10pt}
+
 \textbf{T20} 设 $A$ 和 $B$ 是全集 $U$ 的子集，证明$A \subseteq B$ 当且仅当 $\overline{B} \subseteq \overline{A}$
 
 证$(A \subseteq B) \rightarrow (\overline{B} \subseteq \overline{A})$：\\
@@ -489,6 +545,8 @@ $4k^2 + 4k$为偶数，故$n^2$为奇数，与假设矛盾，故假设不成立�
 对于$\forall x \in A$，即$x \notin \overline{A}$。因为$\overline{B} \subseteq \overline{A}$,所以$x \notin \overline{B}$，即$x \in B$。成立。
 
 综上所述：$A \subseteq B$ 当且仅当 $\overline{B} \subseteq \overline{A}$。
+
+\vspace{10pt}
 
 \textbf{T22} 证明：$k$为奇数是$k^3$为奇数的一个充要条件。
 
@@ -500,13 +558,19 @@ $4k^2 + 4k$为偶数，故$n^2$为奇数，与假设矛盾，故假设不成立�
 
 综上所述：$k$为奇数是$k^3$为奇数的一个充要条件。
 
+\vspace{10pt}
+
 \textbf{T23} 证明或证伪：$n^2 + 41n + 41$对每个整数n都是一个素数。
 
 取$n = 41$，此时$n^2 + 41n + 41 = 2 \times 41 + 41 \times 41 + 41$，显然能被41整除，命题不成立。
 
+\vspace{10pt}
+
 \textbf{T24} 证明或证伪：任何5个连续整数之和能被5整除。
 
 不妨设五个整数分别为$n, n + 1, n + 2, n + 3, n + 4$，和为：$5n + 10$能被5整除，命题成立。
+
+\vspace{10pt}
 
 \textbf{T30} 
 
@@ -536,9 +600,13 @@ $P(n) \rightarrow P(n + 1)$的真值表为：\[
 (c) 不矛盾。分题(a)说明的是$P(n)$与$P(n + 1)$的真值情况一致，说明可以从$P(n)$的真值情况推出$P(n + 1)$
 那么数学归纳法的原理也是近似，先找出一两个例子，然后利用递推关系推出剩下的所有情况。因此并不矛盾。\\
 
+\vspace{10pt}
+
 \textbf{T22}
 
 论证时指举出了$P(0)$一个例子，但是后续$2^k$以及$2^{k-1}$都使用了这个特例。\\
+
+\vspace{10pt}
 
 \textbf{T26} 证明：设 $A$和$B$是方阵，如果$AB = AB$，那么$(AB)^n = A^nB^n$ 对 $n \geqslant 1$ 成立。
 
@@ -556,6 +624,8 @@ $P(n) \rightarrow P(n + 1)$的真值表为：\[
 
 证毕。\\
 
+\vspace{10pt}
+
 \textbf{T28} 证明：每个比27大的整数都能写成$5a+8b$，其中$a, b \in \textbf{N}$
 
 有：$28 = 5 \times 4 + 8 \times 1, \quad 29 = 5 \times 1 + 8 \times 3, \quad 30 = 5 \times 6 + 8 \times 0$，\\ 
@@ -564,16 +634,81 @@ $31 = 5 \times 3 + 8 \times 2, \quad 32 = 5 \times 0 + 8 \times 4$.
 且P(n)成立时。P(n + 5)显然成立。\\
 证毕。
 
+\vspace{10pt}
+
 \textbf{T30} 证明：如果$GCD(a, b) = 1$， 那么对所有$n \geq 1, GCD(a^n, b^n) = 1$.
 
 因为$GCD(a, b) = 1$，即对$a, b$ 分别进行质因数分解时，只有1 这一个共同的公因数。那么当$a, b$分别变为n次方后，
 分解出来的质因数与一开始的等同，因此仍然只会存在1这一个唯一的公因数。因此如果$GCD(a, b) = 1$， 那么对所有$n \geq 1, GCD(a^n, b^n) = 1$。
 
+\vspace{10pt}
+
 \textbf{T34}
 
+当循环尚未进行时（第0次循环），$W_0 = Y, Z_0 = X$，有$(Y \times W_0) + Z_0 = X + Y^2$。
 
+假设进入了第n次循环，不变量成立。即：$(Y \times W_n) + Z_n = X + Y^2$成立。
+
+那么第n + 1次时，$W_{n + 1} = W_n - 1, Z_{n + 1} = Z_n + Y$\\
+因此
+\begin{align*}
+    (Y \times W_{n + 1}) + Z_{n + 1} &= (Y \times (W_n - 1)) + (Z_n + Y)\\
+    &= (Y \times W_n) + Z_n\\
+    &= X + Y^2\\
+\end{align*}
+
+因此$(Y \times W) + Z = X + Y^2$在循环过程中始终成立。
+
+在循环结束时，$W = 0$，因此$Z = X + Y^2$。
+
+\vspace{10pt}
 
 \textbf{T36}
 
+当循环尚未进行时（第0次循环），$R_0 = 1, K_0 = 2M$，有$R \times N^K = 1 \times N^{2M} = N^{2M}$。
+
+假设进入了第n次循环，不变量成立。即：$R_n \times N^{K_n} = N^{2M}$。
+
+那么第n + 1次时，$R_{n + 1} = R_n \times N, K_{n + 1} = K_n - 1$\\
+因此
+\begin{align*}
+    R_{n + 1} \times N^{K_{n+1}} &= (R_n \times N) \times (N^{K_n - 1})\\
+    &= R_n \times N^{K_n}\\
+    &=N^{2M}\\
+\end{align*}
+
+因此$R \times N^K = N^{2M}$在循环过程中始终成立。
+
+在循环结束时，$R = N^{2M}, K = 0$, 因此$R = N^{2M}$。
+
+\section{P86-87}
+
+\textbf{T20}
+
+有 $g_1 = 1, g_2 = 3, g_n = g_{n - 1} + g_{n - 2}$，因此 $g_3 = g_1 + g_2 = 4, g_4 = g_3 + g_2 = 7, g_5 = g_4 + g_3 = 11, g_6 = g_5 + g_4 = 18$。
+提出猜想$\sum_{i}^{n}$
+
+\vspace{10pt}
+
+\textbf{T21}
+
+\vspace{10pt}
+
+\textbf{T22}
+
+\vspace{10pt}
+
+\textbf{T23}
+
+因为 $g_{2n} = g_{2n - 1} + g_{2n - 2}, \quad g_{2n - 1} = g_{2n - 2} + g_{2n - 3}$\\
+有：$g_{2n} = 2 \times g_{2n - 2} + g_{2n - 3}$，因此
+
+\vspace{10pt}
+
+\textbf{T24}
+
+\vspace{10pt}
+
+\textbf{T25}
 
 \end{document}
