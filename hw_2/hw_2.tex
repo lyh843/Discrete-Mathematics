@@ -221,11 +221,23 @@ $(d) \overline{C \cap C} = \{a, c, d, e, f, g\} \quad (e) A \oplus B = \{c, e, f
 证毕。
 \subsection{T25}
 $p$有且只有$p$和$1$两个因数并且$p \nmid a$，则$p$不是$a$的因数，所以$GCD(a, p) = 1$\\
+$p \mid ab$以及$p \mid p$，因此$p \mid sab, p \mid tpb$，所以$p \mid sab + tpb$。
 
 \subsection{T26}
+因为$GCD(a, c) = 1$，所以由定理4可知：有某个整数s 和 t，使得 $1 = sa + tc$，于是$b = sab + tcb$
+因为$c \mid ab, c \mid c$，所以$c \mid sab, c \mid tcb$，所以$c \mid sab + tcb$，所以$c \mid b$。证毕。
+
 \subsection{T27}
+因为$GCD(a,c) = 1$，所以a和c互质。因为$a \mid m, c \mid m$，因此，m拥有因数a,c。因为a和c互质，所以$ac \mid m$。
+
 \subsection{T28}
+因为$d = GCD(a,b)$，所以$\exists x,y \in \mathbf{Z}, a = dx, b = yd, GCD(x,y) = 1$。
+又因为$a \mid b, c\mid d$，所以$\exists m,n \in \mathbf{Z}, b = am, d = cn$。
+所以：$yd = am = dmx, a = dx = cnx$，所以$ac = c^2nx, bd = yd^2 = yc^2n^2$。
+又因为$y = mx$，所以$bd = c^2n^2mx$。因此$bd = nmac$，所以$ac \mid bd$，证毕。
+
 \subsection{T29}
+因为$c \mid ca,c \mid cb$，所以$c$显然为$ca,cb$的一个公因数，所以$GCD(ca,cb) = cGCD(a,b)$
 
 \section{pp.41-44}
 \subsection{T6}
@@ -588,11 +600,214 @@ A(BD) &=
 
 \section{pp.47-49}
 \subsection{T24}
+$\forall x, y \in \mathbf{Q} \rightarrow (x + y) \in \mathbf{Q}$。
+$\forall x \in \mathbf{Q} \rightarrow \frac{x}{2} \in \mathbf{Q}$。
+因此$\forall x, y \in \mathbf{Q} \rightarrow \frac{x + y}{2} \in \mathbf{Q}$。封闭性成立。
 \subsection{T25}
-\subsection{T26}
-\subsection{T27}
-\subsection{T28}
-\subsection{T29}
-\subsection{T35}
+$\forall x, y \in \mathbf{Q}, \frac{x + y}{2} = \frac{y + x}{2}$，所以$x \square y = y \square x$。交换性成立。
 
+\subsection{T26}
+$\forall x,y,z \in \mathbf{Q}, (x \square y) \square z = \frac{\frac{x + y}{2} + z}{2} = \frac{x + y + 2z}{4}$。
+$x \square (y \square z) = \frac{x + \frac{y + z}{2}}{2} = \frac\bigtriangledown {2x + y + z}{4}$。
+因为$(x \square y) \square z \neq x \square (y \square z)$，因此结合律不满足。
+
+\subsection{T27}
+假设存在单位元n，则$\forall x \in \mathbf{Q}, x \square n = x$。因为$x \square n = \frac{x + n}{2}$，
+当且仅当$n = x时，x \square n = x$。因此不存在单位元。
+
+\subsection{T28}
+由于单位元不存在，故逆元也不存在。
+
+\subsection{T29}
+(a) $\forall x, y, w, z \in R$,
+\[
+\begin{bmatrix}
+    x\\
+    y
+\end{bmatrix}
+\bigtriangledown 
+\begin{bmatrix}
+    w\\
+    z
+\end{bmatrix}
+=
+\begin{bmatrix}
+    x + w\\
+    y + z +1
+\end{bmatrix}
+\in R^2
+\]
+因此满足封闭性质。
+
+(b) $\forall x, y, w, z \in R$
+\[
+\begin{bmatrix}
+    x\\
+    y
+\end{bmatrix}
+\bigtriangledown 
+\begin{bmatrix}
+    w\\
+    z
+\end{bmatrix}
+=
+\begin{bmatrix}
+    x + w\\
+    y + z +1
+\end{bmatrix}
+\]
+\[
+    \begin{bmatrix}
+        w\\
+        z
+    \end{bmatrix}
+    \bigtriangledown 
+    \begin{bmatrix}
+        x\\
+        y
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        w + x\\
+        z + y +1
+    \end{bmatrix}
+\]
+因为：
+\[
+    \begin{bmatrix}
+        x + w\\
+        y + z +1
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        w + x\\
+        z + y +1
+    \end{bmatrix}
+\]
+因此交换性质成立。
+
+(c)$\forall m, n, w, x, y, z \in R$
+\[
+\begin{bmatrix}
+    x\\
+    y
+\end{bmatrix}
+\bigtriangledown
+\left(
+    \begin{bmatrix}
+        w\\
+        z
+    \end{bmatrix}
+    \bigtriangledown
+    \begin{bmatrix}
+        m\\
+        n
+    \end{bmatrix}
+\right)
+=
+\begin{bmatrix}
+    x\\
+    y
+\end{bmatrix}
+\bigtriangledown
+\begin{bmatrix}
+    w + m\\
+    z + n + 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+    x + w + m\\
+    y + z + n + 2
+\end{bmatrix}，
+\]
+\[
+\left(
+    \begin{bmatrix}
+        x\\
+        y
+    \end{bmatrix}
+    \bigtriangledown
+    \begin{bmatrix}
+        w\\
+        z
+    \end{bmatrix}
+\right)
+\bigtriangledown
+\begin{bmatrix}
+    m\\
+    n
+\end{bmatrix}
+=
+\begin{bmatrix}
+    x + w\\
+    y + z + 1
+\end{bmatrix}
+\bigtriangledown
+\begin{bmatrix}
+    m\\
+    n
+\end{bmatrix}
+=
+\begin{bmatrix}
+    x + w + m\\
+    y + z + m + 2
+\end{bmatrix}
+\]
+结合性质满足
+\subsection{T35}
+即证：
+对于$5 \times 5$的矩阵$A, B$，$comp(A \land B) = compA \lor compB$, 
+$comp(A \lor B) = compA \land compB$。
+
+由$comp$的定义可知，$compA = \overline{A}$
+令$C = comp(A \land B)$，即$\overline{C} = A \land B$。所以
+\[
+\overline{c_{ij}} =
+\begin{cases}
+    1 & a_{ij} = b_{ij} = 1\\
+    0 & else
+\end{cases}
+\Rightarrow 
+c_{ij} = 
+\begin{cases}
+    1 & (a_{ij} = 0) \lor (b_{ij} = 0)\\
+    0 & else
+\end{cases}
+\]
+$compA \lor compB = \overline{a_{ij}} \lor \overline{b_{ij}}$ 
+\[
+\overline{a_{ij}} \lor \overline{b_{ij}} = 
+\begin{cases}
+    1 & (a_{ij} = 0) \lor (b_{ij} = 0)\\
+    0 & else
+\end{cases}
+\]
+因此$c_{ij} = \overline{a_{ij}} \lor \overline{b_{ij}}$，
+所以$C = comp(A \land B) = compA \lor compB$。
+
+令$D = comp(A \lor B)$，即$\overline{D} = A \lor B$。
+所以
+\[
+\overline{d_{ij}}=
+\begin{cases}
+    1 & (a_{ij} = 1) \lor (b_{ij} = 1)\\
+    0 & else
+\end{cases}
+\Rightarrow
+d_{ij} = 
+\begin{cases}
+    1 & a_{ij} = b_{ij} = 0\\
+    0 & else
+\end{cases}
+\]
+$compA \land compB = \overline{a_{ij}} \land \overline{b_{ij}}$
+\[
+\overline{a_{ij}} \land \overline{b_{ij}}
+\begin{cases}
+    1 & a_{ij} = b_{ij} = 0\\
+    0 & else
+\end{cases}
+\]
+因此$d_{ij} = \overline{a_{ij}} \land \overline{b_{ij}}$，所以$D = comp(A \lor B) = compA \land compB$。
+证毕。
 \end{document}
