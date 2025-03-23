@@ -1,0 +1,88 @@
+\documentclass[12pt, a4paper]{ctexart}
+\usepackage{amsmath,amssymb} % 添加 amssymb 以支持更多符号
+\usepackage{bussproofs}
+\title{离散数学作业\_0}
+\author{李云浩 241880324}
+\date{\today}
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{逻辑和证明}
+\subsection{符号}
+
+% 使用 itemize 列表整理符号,用数学模式包裹符号
+\begin{itemize}
+    \item 逻辑运算符：
+    \begin{itemize}
+        \item 与：$\wedge$ 或 $\land$(\verb|\wedge| 或 \verb|\land|)
+        \item 或：$\vee$ 或 $\lor$(\verb|\vee| 或 \verb|\lor|)
+        \item 非：$\lnot$(\verb|\lnot|)
+    \end{itemize}
+    
+    \item 关系符号：
+    \begin{itemize}
+        \item 小于等于：$\leq$ 或 $\leqslant$(\verb|\leq| 或 \verb|\leqslant|)
+        \item 大于等于：$\geq$ 或 $\geqslant$(\verb|\geq| 或 \verb|\geqslant|)
+        \item 子集：$\subset$, $\subseteq$(\verb|\subset|, \verb|\subseteq|)
+        \item 超集：$\supset$, $\supseteq$(\verb|\supset|, \verb|\supseteq|)
+        \item 属于：$\in$(\verb|\in|)
+        \item 不属于: $\notin$(\verb|\notin|)
+        \item 逻辑等价：$\equiv$(\verb|\equiv|)
+    \end{itemize}
+    
+    \item 箭头符号：
+    $\leftarrow$(\verb|\leftarrow|),
+    $\rightarrow$(\verb|\rightarrow|),
+    $\leftrightarrow$(\verb|\leftrightarrow|)
+
+    \item 希腊字母：
+    $\alpha$(\verb|\alpha|),
+    $\beta$(\verb|\beta|)
+
+    \item 量词：
+    $\forall$(全称量词,\verb|\forall|),
+    $\exists$(存在量词,\verb|\exists|),
+    $\nexists$(不存在,\verb|\nexists|)
+    
+    \item 因果符号：
+    \begin{itemize}
+        \item 因为：$\because$(\verb|\because|)
+        \item 所以：$\therefore$(\verb|\therefore|)
+    \end{itemize}
+\end{itemize}
+
+\subsection{题目示例}
+\subsection*{题目}
+\noindent
+构建论证证明：通过第一个考试的某个人没有读过这本书\newline
+前提:这个版有个学生没有读过这本书；这个班每个人都通过了第一次考试\newline
+$x$的论域是全体学生，$C(x):$ $x$在这个班; $B(x):$ $x$读过这本书；$P(x):$ $x$通过第一次考试
+\subsection*{分析}
+\noindent
+即证：
+\[
+\begin{array}{c}
+    \exists x(C(x) \land \lnot B(x)) \\
+    \forall x(C(x) \rightarrow P(x)) \\
+    \hline 
+    \therefore \exists x(P(x) \land \lnot B(x)) \\
+\end{array}
+\]
+\subsection*{解题过程}
+\[
+\begin{array}{rl @{\quad} l}
+    1. & \exists x(C(x) \wedge \neg B(x)) & \text{前提} \\
+    2. & C(a) \wedge \neg B(a) & \text{EI} \\
+    3. & C(a) & \text{对 2 应用化简率} \\
+    4. & \forall x(C(x) \rightarrow P(x)) & \text{前提} \\
+    5. & C(a) \rightarrow P(a) & \text{UI} \\
+    6. & P(a) & \text{3 和 5 应用假言推理} \\
+    7. & \neg B(a) & \text{对 2 应用化简率} \\
+    8. & P(a) \wedge \neg B(a) & \text{对 6 和 7 应用合取律} \\
+    \hline
+    9. & \therefore \exists x(P(x) \wedge \neg B(x)) & \text{EG} \\
+\end{array}
+\]
+
+\end{document}
