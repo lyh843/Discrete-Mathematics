@@ -15,7 +15,7 @@
 \section{pp.3-5}
 
 \subsection{T5}
-(a) F \quad (b) F \quad (c) F \quad (d) T \quad (e) F \quad (f) F
+(a) F \quad (b) T \quad (c) F \quad (d) T \quad (e) F \quad (f) F
 
 \subsection{T10}
 (a)(e)
@@ -184,8 +184,8 @@ $(d) \overline{C \cap C} = \{a, c, d, e, f, g\} \quad (e) A \oplus B = \{c, e, f
 \end{align*}
 
 \subsection{T22}
-公式：$a_n = \frac{15 + \sqrt{5}}{10}(\frac{1+\sqrt{5}}{2})^n + \frac{15 - \sqrt{5}}{10}(\frac{1-\sqrt{5}}{2})^n$
-
+%公式：$a_n = \frac{15 + \sqrt{5}}{10}(\frac{1+\sqrt{5}}{2})^n + \frac{15 - \sqrt{5}}{10}(\frac{1-\sqrt{5}}{2})^n$
+$a_1 = 2, a_2 = 5, \text{递归公式：}a_n = a_{n-1} + a_{n-2}$
 \subsection{T25}
 (a)属于 \quad (b) 不属于 \quad (c) 属于 \quad (d) 属于 \quad (e) 不属于 \quad (f) 不属于
 
@@ -207,7 +207,7 @@ $(d) \overline{C \cap C} = \{a, c, d, e, f, g\} \quad (e) A \oplus B = \{c, e, f
 
 \subsection{T34}
 (a)$(p \lor q)rq^* = \{prq, qrq, prqq, qrqq, \dots \}$\\
-(b)$p(qq)^*r = \{pqqr, pqqqqr, \dots ,pqq \dots qqr\}$
+(b)$p(qq)^*r = \{pqqr, pqqqqr, pqqqqqqr, \dots\}$
 \subsection{T37}
 因为8是一个$S^-$数，由(3)可知，因为1是8的倍数，因此1也是一个$S^-$数。因此1的所有倍数
 都是$S^-$数，所以$S^-$数集合即整数集$\mathbf{Z}$。
@@ -237,7 +237,9 @@ $p \mid ab$以及$p \mid p$，因此$p \mid sab, p \mid tpb$，所以$p \mid sab
 又因为$y = mx$，所以$bd = c^2n^2mx$。因此$bd = nmac$，所以$ac \mid bd$，证毕。
 
 \subsection{T29}
-因为$c \mid ca,c \mid cb$，所以$c$显然为$ca,cb$的一个公因数，所以$GCD(ca,cb) = cGCD(a,b)$
+因为$c \mid ca,c \mid cb$，所以$c$显然为$ca,cb$的一个公因数。后续进一步对$a,b$进行质因数分解，
+$a = p_1p_2 \dots p_n, b = q_1q_2 \dots q_m$。则$a$和$b$的最大公约数即为$c$乘以$a$和$b$质因数分解后的公共项之积。
+因为$a$和$b$质因数分解后的公共项之积等于$GCD(a,b)$，因此$GCD(ca,cb) = cGCD(a,b)$，证毕。
 
 \section{pp.41-44}
 \subsection{T6}
@@ -429,7 +431,7 @@ A(BD) &=
     \end{bmatrix}
     \left(
     \begin{bmatrix}
-        -3 & 1\\
+        -3 & 2\\
         4 & 1\\
     \end{bmatrix}
     +
@@ -445,14 +447,14 @@ A(BD) &=
         3 & -2\\
     \end{bmatrix}
     \begin{bmatrix}
-        -5 & 4\\
+        -5 & 5\\
         8 & 6\\
     \end{bmatrix}\\
     &=
     \begin{bmatrix}
-        22 & 32\\
-        3 & 10\\
-        -31 & 0\\
+        22 & 34\\
+        3 & 11\\
+        -31 & 3\\
     \end{bmatrix}
 \end{align*}
 

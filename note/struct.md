@@ -80,7 +80,7 @@
     - $ac \equiv (bd)(mod\ n)$
 - **最大公因子（公约数）**：记作$GCD(a,b)$。
   - **最大公因子的性质**
-    - *线性合成*：设$a, b \in \mathcal{Z}^+$，则：$(\exist s,t \in \mathcal{Z}^+)(GCD(a,b) = sa + tb)$。
+    - *线性合成*：设$a, b \in \mathcal{Z}^+$，则：$(\exists s,t \in \mathcal{Z}^+)(GCD(a,b) = sa + tb)$。
     - *辗转相减*：设$a, b \in \mathcal{Z}^+, a < b$，则$GCD(a,b) = GCD(a, b - a)$
     - *辗转相除*：设$a, b \in \mathcal{Z}^+, a < b$，则$GCD(a, b) = GCD(a, a\ mod\ b) \quad $ **欧几里得算法**
 - **互质**：如果整数a和b的最大公因子为1，则称a与b互质。
