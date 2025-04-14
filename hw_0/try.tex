@@ -2,6 +2,8 @@
 \usepackage{graphicx} %图片库
 \usepackage{amsmath}  %数学库
 \usepackage{CJKutf8}  %中文库
+\usepackage{algorithm}
+\usepackage{algpseudocode} % 或者 algorithmicx
 \graphicspath{{image/}} %图片所处文件夹
 \title{My first LaTeX document}
 \author{Hubert Fansworth\thanks{Funded by the Overleaf team.}}
@@ -149,4 +151,24 @@ start a new line, which is also part of the same paragraph.
     \cos \csc \exp \ker \limsup \min \sinh \arcsin \\
     \ln
 \end{math}
+
+
+
+
+
+\begin{algorithm}
+\caption{欧几里得算法}
+\begin{algorithmic}[1]
+\Procedure{Euclid}{$a,b$}\Comment{计算a和b的最大公约数}
+\State $r \gets a \bmod b$
+\While{$r \neq 0$}\Comment{当余数不为0时}
+\State $a \gets b$
+\State $b \gets r$
+\State $r \gets a \bmod b$
+\EndWhile
+\State \textbf{return} $b$\Comment{最大公约数是b}
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
 \end{document}
