@@ -1,0 +1,256 @@
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{amssymb} % 添加 amssymb 以支持更多符号
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{cancel}
+\usepackage{listings}
+\usetikzlibrary{arrows.meta} % 箭头样式
+\title{离散数学作业\_5}
+\author{李云浩 241880324}
+\date{\today}
+\begin{document}
+\maketitle
+\section{5.1}
+\subsection{5}
+每一个整数都有其对应的唯一平方数，且整数的平方数一定为整数。
+因此$dom\ f = A \land ran\ f \subseteq B \land \forall x \in A, f(x)$的值唯一。
+满足函数的要求。
+\subsection{6}
+对每一个实数$a$，都有唯一对应的$e^a$，并且$\forall a \in R \rightarrow e^a \in R$。
+因此$dom\ f = A \land ran\ f \subseteq B \land \forall x \in A, f(x)$的值唯一。
+满足函数的要求。
+\subsection{7}
+对于每一个实数，要么是整数、要么不是整数，并且不能同时即是整数又不是整数。
+因此$dom\ f = A \land (\forall x \in A, f(x) = 1 \lor f(x) = 0)$。满足函数的要求。
+\subsection{8}
+对于每一个实数，都有唯一对应的小于或等于该实数的最大整数。
+因此$dom\ f = A \land ran\ f \subseteq B \land \forall x \in A, f(x)$的值唯一。
+满足函数的要求。
+\subsection{11}
+(a) $\forall b (b\in B \rightarrow (\exists a \in A \land afb))$，因此满足满射。\\
+$\forall a_1 \in A \forall a_2 \in A(a_1 \neq a_2 \rightarrow f(a_1) \neq f(a_2))$，因此满足单射。\\
+(b) $\nexists a \in A$使得$f(a) = b \lor f(s) = d$，因此不满足满射。\\
+$1 \neq 2 \land f(1) = f(2) = a$，因此不满足单射。\\
+\subsection{12}
+(a) $\nexists a \in A$使得$f(a) = z$，因此不满足满射。\\
+$\forall a_1 \in A \forall a_2 \in A(a_1 \neq a_2 \rightarrow f(a_1) \neq f(a_2))$，因此满足单射。\\
+(b) $\forall b \in B, \exists a \in A \rightarrow afb$，因此满足满射。\\
+$1.1 \neq 0.06 \land f(1.1) = f(0.06) = p$，因此不满足单射。\\
+\subsection{13}
+(a) $\forall b \in B$都有$(b + 1) \in A \rightarrow f(b + 1) = b$，因此满足满射。\\
+$\forall a_1 \in A, \forall a_2 \in A(a_1 \neq a_2 \rightarrow a_1 - 1 \neq a_2 - 1 )$，因此满足单射。\\
+(b) $\forall b \in B$都有$b \in A \land -b \in A \rightarrow f(b) = b \land f(-b) = b$，因此满足满射。\\
+$-1 \in A \land 1 \in A \land -1 \neq 1 \rightarrow f(-1) = f(1)$，因此不满足单射。
+\subsection{14}
+(a) $\forall b \in B(\exists (b, 1) \in A \rightarrow f((b, 1)) = b)$，因此满足满射。\\
+$\exists (a, 1) \in A(\exists (a, 2) \in A \rightarrow f((a, 1)) = f((a, 2)) = a)$，因此不满足单射。\\
+(b) 对于$B$中的元素$(2, a)$，显然$A$中没有任何一个元素能通过函数关系指向它，因此不满足满射。\\
+$\exists (1,b) \in A, \exists (2, b) \in A \rightarrow f((1, b)) = f((2, b)) = (1, a)$,因此不满足单射。
+\subsection{15}
+(a) $\forall (m, n) \in B(\exists (\frac{m + n}{2}, \frac{m - n}{2}) \in A \rightarrow f((\frac{m + n}{2}, \frac{m - n}{2}))
+= (m, n))$,因此满足满射。\\
+$\forall (m, n) \in B$，有且仅有$(\frac{m + n}{2}, \frac{m - n}{2}) \in A$，使得$f(\frac{m + n}{2}, \frac{m - n}{2}) = (m, n)$。因此满足单射。\\
+(b) $\forall b \in B, (\exists \sqrt{b} \in A \rightarrow f( \sqrt{b} ) = b)$,因此满足满射。\\
+$\exists a \in A \exists -a \in A(a \notin -a \rightarrow f(a) = f(-a) = a^2)$,因此不满足单射。
+\subsection{29}
+对于每个$A$中的元素，其都可以通过函数指向$B$中的任一元素，因此函数的个数为$n^m$个。
+\subsection{30}
+$g:B \rightarrow C$为单射函数\\
+$f:A \rightarrow B$为双射函数
+\subsection{31}
+$C$, $B$, 因为$g:B \rightarrow C$是满射的，$A$，因为$f:A \rightarrow B$是满射的。
+\subsection{33}
+因为$g \circ f$是满射的，则对于$\forall c \in C (\exists f(x) \rightarrow g(f(x)) = c)$。
+因为$f(x) \in B$，因此$g:B \rightarrow C$是满射的。
+\subsection{34}
+因为$O(a_1, f) \cap O(a_2, f) \neq \varnothing$，所以$\exists f^{m_1}(a_1) = f^{m_2}(a_2)$。因此$\forall n \in Z,
+(f^n(a_1) = f^{n - m_1 + m_2}(a_2))$，因此$O(a_1, f) = O(a_2, f)$。
+\subsection{40}
+(a) 令$a_1 = -1, a_2 = 1$，此时$f(a_1 + a_2) = f(0) = 0$,$f(a_1) = 1, f(a_2) = 1 \rightarrow f(a_1) + f(a_2) = 2$。
+因此$f(a_1 + a_2) \neq f(a_1) + f(a_2)$，因此原式不成立。\\
+(b) 因为$s_1 \cdot s_2$即两个字符串进行拼接，长度为原来两条字符串各自长度的加和。故$f(s_1 \cdot s_2) = f(s_1) + f(s_2)$
+显然成立。
+\subsection{41}
+(a)因为$a, b \in A \land A = \{0, 1\}$，并且$a \diamond b = (a + b)mod 2$。因此当且仅当$a = b$时，
+$(a \diamond b) = 0$。反例：$f(1 \diamond 1) = f(0)$为假，$f(1) \lor f(1) = f(1)$为真。因此$f(1 \diamond 1) \neq f(1) \lor f(1)$。\\
+(b)$$
+\begin{array}{|c|c|c|c|c|c|c|}
+    \hline
+    a & b & a \diamond b & f(a) & f(b) & f(a \diamond b) & f(a) \land f(b)\\
+    \hline
+    0 & 0 & 0 & 0 & 0 & \text{假} & \text{假}\\
+    \hline
+    0 & 1 & 1 & 0 & 1 & \text{真} & \text{假}\\
+    \hline
+    1 & 0 & 1 & 1 & 0 & \text{真} & \text{假}\\
+    \hline
+    1 & 1 & 0 & 1 & 1 & \text{假} & \text{真}\\
+    \hline
+\end{array}
+$$因此$f(a \diamond b) \neq f(a) \land f(b)$
+\section{5.2}
+\subsection{7}
+不妨设$n = pk + q$，其中$(0 \leq q < k)$。因此从$1 \sim n$中，一共有$p$个$k$的倍数。且$\lfloor \frac{n}{k} \rfloor = p$。
+因此在$1 \sim n$之间，$k$的倍数的个数是$\lfloor \frac{n}{k} \rfloor$个。
+\subsection{8}
+因为$n$是奇数，所以$n = 2k - 1, k \in Z$。因此$n^2 =  (2k - 1)^2 = 4k^2 - 4k + 1$。因此$\lceil \frac{n^2}{4} \rceil = 
+k^2 - k + 1$，且$\frac{n^2 + 3}{4} = \frac{4k^k - 4k + 4}{4} = k^2 - k + 1$。因此$\lceil \frac{n^2}{4} \rceil = \frac{n^2 + 3}{4}$。
+\subsection{18}
+(a) 对于每一个$A^*$中的字符串，它都一定有确切的长度。因此$l$是处处有定义的。\\
+(b) 反例：对于$a, b$，$l(a) = l(b) = 1$，因此$l$不是单射的。\\
+(c) 题目中给出的函数的陪域是所有整数，但$A^*$中不存在长度为负数的字符串，因此$l$不是满射的。
+\subsection{20}
+对于一个布尔变量时，变量的值有两种情况。对于每个变量的值，其对应的布尔函数的值也有两种情况，因此总共有4个不同的关于p的布尔函数。\\
+对于两个布尔变量时，变量的值有$2 \times 2 = 4$种情况。对于每个变量的值，其对应的布尔函数的值有两种情况，因此总共有$2^4 = 16$个不同的
+有两个布尔变量的布尔函数。
+\subsection{28}
+根据特征函数的定义：$$
+f(x) = 
+\begin{cases}
+    1, & x \in A\\
+    0, & x \notin A
+\end{cases}
+$$
+因为$A$中共有$n$个元素，对于$A$的任意一个子集，即将$A$中部分元素舍弃掉，此时该元素在子集中的特征方程取值为0。
+一共有$n$个元素，因此能组成$2^n$个不同的01串，即表示不同的子集。因此$|pow(A)| = 2^n$。
+\subsection{29}
+因为$f_A$是$A$关于全集$U$的特征函数，因此有$$
+\forall x \in U, f(x) = 
+\begin{cases}
+    1, & x \in A\\
+    0, & x \notin A
+\end{cases}
+$$
+因此$f^{-1}$表示：$$
+\begin{cases}
+    x \in A, & 1\\
+    x \notin A, & 0
+\end{cases}
+$$
+因此$f^{-1}(1)$表示所有在集合$A$中的元素。
+\section{5.3}
+\subsection{11}
+$\Theta(n\lg(n)):f_1, f_{12} \quad \Theta(n^2):f_2 \quad \Theta(a^n):f_3 \quad \Theta(lg(n)):f_4 \quad \Theta(1):f_5\\
+\Theta(n):f_6, f_{10}, f_{11} \quad \Theta(lg(lg(n))): f_7 \quad \Theta(n^{0.7}): f_8 \quad \Theta(n^n):f_9$
+\subsection{12}
+$\Theta(1) < \Theta(\lg(\lg(n))) < \Theta(\lg(n)) < \Theta(n\lg(n)) < \Theta(n^{0.7}) < \Theta(n) < \Theta(n^2)
+< \Theta(a^n) < \Theta(n^n)$
+\subsection{13}
+$\Theta(1) : f_5 \quad \Theta(n) : f_6, f_{10}, f_{11} \quad \Theta(n\lg(n)) : f_1 \quad \Theta(\lg(n)) : f_4\\$
+$\Theta(n^2) : f_2 \quad \Theta(\sqrt{n}): \text{无} \quad \Theta(2^n) : \text{无}$
+\subsection{20}
+$f(n) = 2n \in \Theta(n)$.
+\subsection{21}
+$if$判断中一步，$N$和$Q$的两层$for$循环中有一步，三层$N, Q, M$的循环中，要执行乘法、加法、赋值的三步操作，
+最后还有一步$return$操作。因此步骤函数为$f(n) = 1 + NQ + 3NQM + 1$。该函数为$\Theta(n^3)$.
+\subsection{22}
+因为$F(N + 1) = 2F(N) + F(N + 1), F(0), F(1)$的通项公式为$F(n) = \frac{1}{3}2^n - \frac{1}{3}(-1)^n$。
+因此$F(N) \in \Theta(2^n)$，并且可以得出$F(N)$所需的运算时间大概为$\frac{1}{3}2^n - \frac{1}{3}(-1)^n$倍的运算$F(0)$的时间。
+为$\Theta(2^n)$
+\subsection{23}
+$(a) P_n = P_{n - 1} + (n - 2) + (n - 3), P_3 = 1, P_4 = 4$\\
+(b) 由$(a)$可得递推关系为：$P_n = P_3 + \sum_{3}^{n}(2k - 5) = P_3 + (n + 3)(n - 2) - 5n + 10 = n^2 - 4n + 5$。因此
+运行时间为$n^2 - 4n + 5$倍的$P_3$的运行时间。为$\Theta(n^2)$
+\subsection{24}
+(1) 充分性：$0 < a < b \Rightarrow \Theta(n^a)$比$\Theta(n^b)$低。\\
+因为$0 < a < b \rightarrow \frac{n^b}{n^a} = n^{b - a} > 1$，因此$n^b > n^a$。故$\Theta(n^a)$比$\Theta(n^b)$低.
+(2) 必要性：$\Theta(n^a)$比$\Theta(n^b)$低$\Rightarrow 0 < a < b$。\\
+反证法：当$a = b$时，$\Theta(n^a)$显然与$\Theta(n^b)$同阶。
+当$a > b$时，$\lim_{n \rightarrow \infty} \frac{n^b}{n^a} = 0$，与$\Theta{n^a}$比$\Theta{n^b}$低不符。
+因此$0 < a < b$。\\
+综上所述：$\Theta(n^a)$比$\Theta(n^b)$低当且仅当$0 < a < b$。
+\subsection{25}
+(1) 充分性：$0 < a < b \Rightarrow \Theta(a^n)$比$\Theta(b^n)$低。\\
+因为$0 < a < b \rightarrow a \times a \times \dots \times a < b \times b \times \dots \times b$，
+故$\Theta(a^n)$比$\Theta(b^n)$低。
+(2) 必要性：$\Theta(a^n)$比$\Theta(b^n)$低$\Rightarrow 0 < a < b$。\\
+反正法：当$a = b$,显然$\Theta(a^n)$与$\Theta(b^n)$同阶。
+当$a > b$时，由(1)可证得：$\Theta(a^n)$比$\Theta(b^n)$高阶，因此与前提矛盾。
+故$0 < a < b$.\\
+综上所述：$\Theta(a^n)$比$\Theta(b^n)$低，当且仅当$0 < a < b$。
+\subsection{26}
+当$r \neq 0$时，存在$c > r \rightarrow |rf(x)| < c|f(x)|$，因此$rf(x)$是$O(f(x))$。
+又存在$d > \frac{2}{|r|} \rightarrow d|rf(x)| = 2|f(x)| > |f(x)|$，因此$f(x)$是$O(rf(x))$。
+综上所述，$\Theta(rf) = \Theta(f)$。
+\subsection{27}
+当$\Theta(f)$比$\Theta(g)$低时，有$\exists c \in \mathbf{R} \rightarrow |f(x)| < c|g(x)|$。因为$h(x)$是一个非零函数，
+因此$|h(x)| \neq 0 \rightarrow |h(x)||f(x)| < c|h(x)||g(x)|$因此：$\exists c \in \mathbf{R} \rightarrow |h(x)f(x)| < c|h(x)g(x)|$。
+即$\Theta(fh)$比$\Theta(gh)$低。
+\subsection{28}
+因为$\Theta(f) = \Theta(h)$，所以$\exists a_1 \in \mathbf{R} a_1|f| < |h|$。
+同理，因为$\Theta(g) = \Theta(h)$，所以$\exists b_1 \in \mathbf{R} b_1 |g| < |h|$。
+因此$\frac{a_1 + b_1}{2}(|f| + |g|) < |h||$,所以$f + g$是$O(h)$的。
+\subsection{29}
+因为$\Theta(f) = \Theta(g)$，所以$\exists a_1, a_2 \in \mathbf{R} a_1|f| < |g|, a_2|f| > |g|$。
+对于$\forall c \neq 0$，取$b_1 = \frac{a_1}{|c|}, b_2 = \frac{a_2}{|c|}$，因此$b_1|cf| = a_1|f| < |g| \land
+b_2|cf| = a_2|f| > |g|$。因此$\Theta(cf) = \Theta(g)$。
+\section{5.4}
+\subsection{12}
+(a) $(1, 4, 5) \circ (2, 3) \circ (6, 8)$\\
+(b) $(1, 2, 3, 4) \circ (5, 7, 8, 6)$
+\subsection{13}
+(a) $(1, 6, 3, 7, 2, 5, 4, 8)$\\
+(b) $(1, 2, 3) \circ (5, 6, 7, 8)$
+\subsection{14}
+(a) $(a, g, e, c, b, d)$\\
+(b) $(a, d, b, e, g, c)$\\
+\subsection{15}
+(a) $(2, 6) \circ (2, 8) \circ (2, 5) \circ (2, 4) \circ (2, 1)$\\
+(b) $(3, 6) \circ (3, 1) \circ (4, 5) \circ (4, 2) \circ (4, 8)$
+\subsection{16}
+$$
+\begin{array}{|c|c|c|c|c|c|c|c|c|c|c|}
+    \hline
+    1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11\\
+    \hline
+    W & A & E & Y & R & R & H & O & E & U & E\\
+    \hline
+\end{array}
+$$
+\subsection{20}
+(a) $(1, 4, 6, 8, 3) = (1, 3) \circ (1, 8) \circ (1, 6) \circ (1, 4)$，偶置换\\
+(b) $(1, 7, 6, 8, 5) \circ (2, 3, 4) = (1, 5) \circ (1, 8) \circ (1, 6) \circ (1, 7) \circ (2, 4) \circ (2, 3)$,偶置换。 
+\subsection{26}
+设置换$p$是将$A$中的$b_1, b_2, \dots, b_r$进行循环，则有$\{(b_1, b_2), (b_2, b_3), \dots (b_{r - 1}, b_r)\}$。
+因此$p \circ p$为$\{(b_1, b_3), (b_2, b_4), \dots\}$。\\
+当$r$为奇数时，$p \circ p$表示循环$(b_1, b_3, \dots b_r, b_2, b_4, \dots b_{r - 1})$。\\
+当$r$为偶数时，$p \circ p$可以拆分为两个循环，分别为$(b_1, b_3, \dots b_{r - 1})$，$(b_2, b_4, \dots b_r)$。
+\subsection{28}
+(a) $p = (1, 4) \circ (2, 3, 5)$\\
+(b) $p^{-1} = (4, 1) \circ (2, 5, 3)$\\
+(c) $p^2 = (2, 5, 3)$\\
+(d) 因为$(1, 4)$的长度为$2$，$(2, 3, 5)$的长度为$3$。因此$k = LCM(2, 3) = 6$
+\subsection{29}
+(a) 当$n = 1$，已由题目给出，$p$是$A$的一个置换。\\
+假设$n = k$时，$p^k$是$A$的一个置换，下证：$n = k + 1$时，$p^{k + 1}$是$A$的置换。\\
+因为$p^k$是$A$上的一个置换，因此$p^k$是从$A$到$A$的双射函数。同理，$p$也是$A$上的一个双射函数。
+因为双射函数复合双射函数仍是双射函数，因此$p^k \circ p = p^{k + 1}$仍是$A$上的一个双射函数，
+故$p^{k + 1}$是$A$的置换。\\
+综上所述，如果$p$是$A$的一个置换，那么$p^n$也是$A$的一个置换。\\
+(b) 对于一个长度为$r$的循环$a = \{(a_1, a_2, \dots, a_r)\}$，$a^r$表示其中长度为$r$的路径，
+该路径长度恰好为循环的长度，因此所有元素都回到自身，即$a^r = I_a$。\\
+不妨将$p$化为多个互不相交的循环的复合形式，长度分别为$n_1, n_2, \dots n_k$。由上面的结论可知，
+当$m = LCM(n_1, n_2, \dots, n_k)$时，满足所有元素都回到自身，因此$p^m = I_A$。
+\subsection{30}
+不妨设$p$能够转化为多个循环的复合形式，其中一个循环为：$(c_1, c_2, \dots, c_r)$。下证$R$是一个等价关系：\\
+(1) 自反性：对于$\forall x \in A, p^0(x) = x$。因此$\forall x \in A \rightarrow x R x$。满足自反性。\\
+(2) 对称性：对于$\forall (a, b) \in R \land a \neq b$，因此$a, b$一定是$c_1 \sim c_r$中的一个元素。设$a = c_i, b = c_j\ (i < j)$。
+则：$p^{j - i}(a) = b \land p^{r + i - j}(b) = a$。因此$(b, a) \in R$。所以$\forall (a, b) \in R \rightarrow (b, a) \in R$，满足对称性。\\
+(3) 传递性：对于$\forall (a, b), (b, d) \in R$，当$ a = b \lor b = d$时显然满足传递性。当$a \neq b \land b \neq d$时，$a, b, d$一定是$c_1, c_2, \dots, c_r$
+中的元素，因此不妨设$a = c_i, b = c_j, d = c_k\ (i < j < k)$，因此有$p^{j - i}(a) = b \land p^{k - j}(b) = d \rightarrow p^{k - i}(a) = d$。
+故$\forall (a, b), (b, d) \in R \rightarrow (a, d) \in R$。满足传递性。\\
+因此$R$是一个等价关系。\\
+将$p$化为多个互不相交的循环的复合形式。每个循环中的元素组成$R$的一个等价类。剩下单独的元素分别独自组成$R$的等价类。
+\subsection{37}
+(a) $3$个，分别为$(1, 2, 3), (1, 3, 2), (2, 1, 3)$\\
+(b) 任选两个摆在奇数位上：$C_4^2 = 6$个，其余都能确定。因此总共$6$个。
+\subsection{38}
+任意选择两个数字摆在奇数位上：$C_5^2 = 10$个，由于具有递增递减性质，因此其余元素的位置也能确定。因此总共有$10$个。
+\subsection{39}
+只要选出什么数字摆在奇数位上，则该序列便能确定。当$n$为偶数时，奇数位有$\frac{n}{2}$个数字。当$n$为基数时，奇数位有$\frac{n + 1}{2}$个数字。
+因此，奇数位的数字有$\lceil \frac{n}{2} \rceil$个。故$A$的增-减置换数等于由$A$中元素形成的长度为$\lceil \frac{n}{2} \rceil$的递增序列的数目。
+\end{document}

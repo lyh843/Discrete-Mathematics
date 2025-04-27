@@ -58,7 +58,7 @@ $$
   - 关系矩阵中关于主对角线对称的任意两个元素至多有一个1
   - 关系图中任两个顶点间至多有一个方向的边
 5. **传递性**：$\forall x \forall y \forall z (x, y, z \in A \land (x, y) \in R \land (y, z) \in R \rightarrow (x, z) \in R)$
-  - 关系矩阵$[r_{ij}]_{n \times n}$中，对$\forall i \forall j \forall k$有，若$r_{ik} = 1$且$r_{kj} = 1$, 则$r_{ij} = 1$。
+  - 关系矩阵 $[r_{ij}]_{n \times n}$ 中，对$\forall i \forall j \forall k$有，若$r_{ik} = 1$且$r_{kj} = 1$, 则$r_{ij} = 1$。
   - 关系图中，任意一条长度为2的路径都有从其起始顶点到终止顶点的边。
 
 ### 注意点
@@ -73,7 +73,7 @@ $
   - $R \circ (S_1 \cup S_2) = (R \circ S_1) \cup (R \circ S_2)$
   - $R \circ (S_1 \cap S_2) \subseteq (R \circ S_1) \cap (R \circ S_2)$
   - $R \circ I_A = I_A \circ R = R$
-  - 矩阵表示：由$M_R = (a_{ij})_{m \times n}, M_T = (b_{ij})_{n \times p}$，则：$M_{R \circ T} = M_R \circ M_T$，其中$M_{R \circ T} = (c_{ij})_{m \times p}, c_{ij} = \bigvee_{k = 1}^n(a_{ik} \land b_{kj})$*（矩阵乘法）*
+  - 矩阵表示：由 $M_R = (a_{ij})_{m \times n}, M_T = (b_{ij})_{n \times p}$，则：$M_{R \circ T} = M_R \circ M_T$，其中 $M_{R \circ T} = (c_{ij})_{m \times p}, c_{ij} = \bigvee_{k = 1}^n(a_{ik} \land b_{kj})$ *（矩阵乘法）*
 2. **幂运算**：$R^0 = I_A, R^1 = R, R^{n+1} = R^n \circ R$
   - 一般地，对于$A$上的关系$R$，有：$R^{2k+1} = R^1, R^{2k} = R^2$
   - $R^m \circ R^n = R^{m + n}, (R^m)^n = R^{mn}$
