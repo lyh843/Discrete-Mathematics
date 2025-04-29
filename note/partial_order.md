@@ -67,3 +67,13 @@ $(a, b) \in \preccurlyeq$记为$a \preccurlyeq b$，读作**a对b有偏序关系
 $S$是$L$的一个非空子集，若$S$对于$\land$和$\lor$封闭，则$S$是$L$的一个**子格**（上下确界都在$S$中）。
 
 ### **特殊格**
+1. **链式格**：任意两个元素都可以比较，即全序
+2. **菱形格**：$b \lor (c \land a) = (b \lor c) \land a = a$
+<img src="./8d5a0adad5f70735fcd75fe0ba377c8.jpg" alt="描述文字" width="100" height="75" />
+3. **五边形格**：不满足分配律的最简单格。
+$c \lor (b \land d) = c \lor e = c \neq (c \lor b) \land d = a \land d = d$
+   <img src="./e38b8fd11baee429f63f20bdc50bc93.jpg" alt="描述文字" width="100" height="75" />
+4. **分配格**：满足分配律的格
+    特性：**当且仅当**它不包含任何同构于菱形格或五边形格的子格。
+5. **有界格**：具有最大元素1和最小元素0
+   **补元**：对于有界格$L$中任意的元素$a$，若存在元素$b$，使得$a \lor b = 1$且$a \land b = 0$，则$b$为$a$的补元。（补元具有**唯一性**）
