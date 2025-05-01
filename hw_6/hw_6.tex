@@ -158,36 +158,166 @@ $R'$表示$\{(a, b) |\ a | b \land a \neq b\}$。\\
 因为$(A, \leq),(A', \leq')$都是全序关系并且元素都为4个，因此必定同构。
 \section{6.2}
 \subsection{T6}
+无极大元，极小元为0
 \subsection{T8}
+极小元$2, 3$\quad 极大元48
 \subsection{T12}
+最大元5，无最小元
 \subsection{T14}
+最小元0，最大元1
 \subsection{T17}
+不等价，在如下的哈斯图中，$2$是$A$的一个极大元，不存在$c \in A$使得$2 < c$。但是$\exists 3 \in A$，
+$3 \leq 2$不成立。因此命题不等价。
+$$
+\begin{tikzpicture}[every node/.style={circle, draw}, node distance=1.5cm]
+    \node (1) {1};
+    \node (2) [above left=of 1] {2};
+    \node (3) [above right=of 1] {3};
+    
+    \draw (1) -- (2);
+    \draw (1) -- (3);
+\end{tikzpicture}$$
 \subsection{T18}
+不等价，在如下的哈斯图中，$1$是$A$的一个极小元，不存在$c \in A$使得$c < 1$。
+但是$\exists 2 \in A$， $1 \leq 2$不成立。因此命题不等价。
+$$
+\begin{tikzpicture}[every node/.style={circle, draw}, node distance=1.5cm]
+    \node (1) {3};
+    \node (2) [below left=of 1] {1};
+    \node (3) [below right=of 1] {2};
+    
+    \draw (1) -- (2);
+    \draw (1) -- (3);
+\end{tikzpicture}
+$$
 \subsection{T19}
+(a) 真命题。在$A$中任取一个元素$a_0$，如果$\exists a_1 (a_1 \in A \land a_1 > a_0)$，
+则换取$a_1$，重复上述过程。因为偏序集为有限集，因此必定$\exists a_k(a_k \in A \land \nexists a_i (a_i \in A \land a_i > a_k))$。
+故必定存在$a_k$为极大元\\
+(b) 假命题。参考17题的哈斯图，不存在最大元\\
+(c) 真命题。在$A$中任取一个元素$a_0$，如果$\exists a_1 (a_1 \in A \land a_1 < a_0)$，
+则换取$a_1$，重复上述过程。因为偏序集为有限集，因此必定$\exists a_k(a_k \in A \land \nexists a_i (a_i \in A \land a_i < a_k))$。
+故必定存在$a_k$为极小元\\
+(d) 假命题。参考18题的哈斯图，不存在最小元。
 \subsection{T20}
+假设存在两个最大元$a_1, a_2$。因为它们是最大元，因此有$\forall a \in A \rightarrow a \leq a_1 \land a \leq a_2$。因为$a_1 \in A \land a_2 \in A$。
+因此$a_1 \leq a_2 \land a_2 \leq a_1 \rightarrow a_1 = a_2$，因此只有一个最大元
 \subsection{T22}
+设$B$的上界为集合$C$，$B$有两个最小上界$c_1, c_2$。因此有$\forall c \in C \rightarrow c_1 \leq c \land c_2 \leq c$。因为$c_1 \in C \land c_2 \in C$。
+因此$c_1 \leq c_2 \land c_2 \leq c_1 \rightarrow c_1 = c_2$，因此至多只有一个最小上界。\\
+同理可证，$B$至多只有一个最大下界。
 \subsection{T23}
+(a) $\{g, f, h\}$ \quad (b) $\{a, b, c\}$ \quad (c) $f$ \quad (d) $c$ 
 \subsection{T24}
+(a) $\varnothing$ \quad (b) $\varnothing$ \quad (c) 无 \quad (d) 无
 \subsection{T25}
+(a) $\{d, e, f\}$ \quad (b) $\{a, b\}$ \quad (c) $d$ \quad (d) $b$ 
 \subsection{T26}
+(a) $\{5\}$ \quad (b) $\{1, 2, 3\}$ \quad (c) $5$ \quad (d) $3$
 \subsection{T32}
+(a) $\left\{
+    \begin{bmatrix}
+        1 & 1\\
+        0 & 1
+    \end{bmatrix},
+    \begin{bmatrix}
+        1 & 1\\
+        1 & 1
+    \end{bmatrix}
+\right\}$\quad
+(b) $\left\{
+    \begin{bmatrix}
+        0 & 0\\
+        0 & 0
+    \end{bmatrix},
+    \begin{bmatrix}
+        0 & 0\\
+        0 & 1
+    \end{bmatrix}
+\right\}$\quad
+(c) $\begin{bmatrix}
+    1 & 1\\
+    0 & 1
+\end{bmatrix}$\quad
+(d) $\begin{bmatrix}
+    0 & 0\\
+    0 & 1
+\end{bmatrix}$
 \subsection{T33}
+\begin{tikzpicture}[every node/.style={circle, draw}, node distance=0.2cm]
+    \node (1) {a};
+    \node (2) [above=of 1] {b};
+    \node (3) [above=of 2] {c};
+    \node (4) [above=of 3] {d};
+    \node (5) [above=of 4] {e};
+    \node (6) [above=of 5] {f};
+    \node (7) [above=of 6] {g};
+    \node (8) [above=of 7] {h};
+    
+    \draw (1) -- (2);
+    \draw (2) -- (3);
+    \draw (3) -- (4);
+    \draw (4) -- (5);
+    \draw (5) -- (6);
+    \draw (6) -- (7);
+    \draw (7) -- (8);
+\end{tikzpicture}
 \subsection{T35}
+假设$a_1$为$A$的极大元，由极大元的定义可知：$\forall a(a \in A \rightarrow a \leq a_1)$因此$\forall a(a \in A \rightarrow (a, a_1) \in R)$。
+因此在$M_R$，若存在第$a_k$列全为$1$，则$a_k$是$A$的最大元。\\
+同理，在$M_R$中，若存在第$a_i$行全为$1$，则$a_i$是$A$的最小元。
 \subsection{T36}
+\begin{tikzpicture}[every node/.style={circle, draw}, node distance=1.5cm]
+    \node (1) {c};
+    \node (2) [below left=of 1] {a};
+    \node (3) [below right=of 1] {b};
+    \node (4) [above left=of 1] {d};
+    \node (5) [above right=of 1] {e};
+    
+    \draw (1) -- (2);
+    \draw (1) -- (3);
+    \draw (1) -- (4);
+    \draw (1) -- (5);
+\end{tikzpicture}
 \subsection{T37}
+(a) 从$51 \sim 100$，$A$中都不存在它们除本身外的倍数。而从$2 \sim 50$，它们的2倍都在$A$中。因此$(A, \leq)$有50个极大元\\
+(b) $\{2, 4, 8, 16, 32, 64\}$
 \subsection{T38}
+$(A, \leq)$中极小元的个数即从$2 \sim 100$中，质数的个数。因此极小元组成的集合。\\
+为：$\{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97\}$
+共$25$个。
 \section{6.3}
 \subsection{T1}
+对于该哈斯图中的任意两个元素，它们的最小上界和最大下界都在哈斯图中，是格。
 \subsection{T2}
+$e \lor f$以及$a \land b$不在哈斯图中，不是格。
 \subsection{T3}
+$e \land d$不在哈斯图中，不是格。
 \subsection{T4}
+对于该哈斯图中的任意两个元素，它们的最小上界和最大下界都在哈斯图中，是格。
 \subsection{T5}
+对于该哈斯图中的任意两个元素，它们的最小上界和最大下界都在哈斯图中，是格。
 \subsection{T6}
+对于该哈斯图中的任意两个元素，它们的最小上界和最大下界都在哈斯图中，是格。
 \subsection{T13}
+
 \subsection{T14}
+$\forall x, y \in [a, b]$，有$(a \leq x \leq b) \land (a \leq y \leq b)$。
+因此$(a \leq (x \land y) \leq b) \land (a \leq (x \lor y) \leq b)$。因此$x, y$的上界和下界都在这个区间内。
+因此区间$[a, b]$关于$\land,\lor$运算是闭合的。因此$[a, b]$是$L$的一个子格。
 \subsection{T15}
+对于全序偏序集，其中任意两个元素皆可比，因此其子集中的任意两个元素仍然是可比的，即其子集仍为一个全序偏序集。
+显然对于一个全序偏序集，一定是关于$\land,\lor$闭合的。因此全序偏序集的子集是一个子格。
 \subsection{T18}
+反证法：假设$0 = I$，有$\forall x \in L, 0 \leq x \leq I \rightarrow 0$。
+因此所有格中的元素都为$0$，则所有元素不具有偏序关系，则不属于一个格。
+因此原假设不成立，即$0 \neq I$。
 \subsection{T19}
+充分性：$a \land b = a \rightarrow a \leq b$\\
+因为$(a \land b) \leq b$，又因为$a = a \land b$，因此$a \leq b$。\\
+必要性：$a \leq b \rightarrow (a \land b = a)$\\
+因为$a \leq b$，因此$a \land b$是$a, b$的最大下界。同时$(a = a) \land (a \leq b)$，因此$a$也是
+$a, b$的最大下界。因此$a \land b = a$。
 \subsection{T20}
 \subsection{T22}
 \subsection{T24}
